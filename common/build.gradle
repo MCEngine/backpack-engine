@@ -5,6 +5,6 @@ plugins {
 def backpackApiVersion = findProperty('mcengine-backpack-api.version') ?: 'undefined'
 
 dependencies {
-    compileOnly "io.github.mcengine:mcengine-backpack-api:$backpackApiVersion"
+    implementation "io.github.mcengine:mcengine-backpack-api:$backpackApiVersion"
     compileOnly 'org.spigotmc:spigot-api:1.21.5-R0.1-SNAPSHOT'
 }

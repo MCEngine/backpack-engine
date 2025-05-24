@@ -1,8 +1,11 @@
 package io.github.mcengine.spigotmc.backpack;
 
 import java.io.File;
+import org.bukkit.plugin.Plugin;
 
 public class MCEngineBackPackUtil {
+
+    private Pluing plugin;
 
     public MCEngineBackPackUtil(Plugin plugin) {
         this.plugin = plugin;
