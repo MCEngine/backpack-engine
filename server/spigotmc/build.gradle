@@ -1,0 +1,13 @@
+plugins {
+    id 'java'
+}
+
+def backpackApiVersion = findProperty('mcengine-backpack-api.version') ?: 'undefined'
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.21.5-R0.1-SNAPSHOT'
+
+    compileOnly project(':common')
+
+    compileOnly "io.github.mcengine:mcengine-backpack-api:$backpackApiVersion"
+}
