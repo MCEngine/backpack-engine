@@ -12,3 +12,18 @@ dependencies {
 
     compileOnly "io.github.mcengine:mcengine-backpack-api:$backpackApiVersion"
 }
+
+processResources {
+    def props = [version: version]
+    inputs.properties(props)
+    filteringCharset 'UTF-8'
+    filesMatching('plugin.yml') {
+        expand(props)
+    }
+}
+
+shadowJar {
+    archiveBaseName = "${project.jarName}-SpigotMC"
+}
+
+build.dependsOn shadowJar
