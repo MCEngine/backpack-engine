@@ -5,7 +5,7 @@ import org.bukkit.plugin.Plugin;
 
 public class MCEngineBackPackUtil {
 
-    private Pluing plugin;
+    private Plugin plugin;
 
     public MCEngineBackPackUtil(Plugin plugin) {
         this.plugin = plugin;
