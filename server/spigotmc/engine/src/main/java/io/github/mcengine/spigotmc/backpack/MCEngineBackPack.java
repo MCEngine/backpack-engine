@@ -20,6 +20,8 @@ public class MCEngineBackPack extends JavaPlugin {
         getCommand("backpack").setTabCompleter(new MCEngineBackPackCommonTabCompleter());
         // Register Listener
         getServer().getPluginManager().registerEvents(new MCEngineBackPackCommonListener(this), this);
+
+        MCEngineApi.checkUpdate(this, getLogger(), "github", "MCEngine", "backpack-original", getConfig().getString("github.token", "null"));
     }
 
     @Override
