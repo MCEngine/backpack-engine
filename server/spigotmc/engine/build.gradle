@@ -2,6 +2,7 @@ plugins {
     id 'java'
 }
 
+def mcengineApiVersion = findProperty('mcengine-api.version') ?: 'undefined'
 def backpackApiVersion = findProperty('mcengine-backpack-api.version') ?: 'undefined'
 def spigotmcApiVersion = findProperty('spigotmc-api.version') ?: 'undefined'
 
@@ -10,6 +11,7 @@ dependencies {
 
     compileOnly project(':common')
 
+    implementation "io.github.mcengine:mcengine-api:$mcengineApiVersion"
     compileOnly "io.github.mcengine:mcengine-backpack-api:$backpackApiVersion"
 }
 
